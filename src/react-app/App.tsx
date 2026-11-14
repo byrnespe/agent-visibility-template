@@ -202,7 +202,7 @@ export default function App() {
 	return (
 		<main className="container">
 			<header>
-				<p className="kicker">AI Agent Visibility</p>
+				<p className="kicker">Asbury AI Solutions · Agent Visibility</p>
 				<h1>{info.site.name}</h1>
 				<p className="lede">{info.site.description}</p>
 				<p className="muted">
@@ -265,9 +265,8 @@ export default function App() {
 
 			<footer>
 				<p className="muted">
-					Built on Cloudflare Workers + Workers AI + KV. Replace the sample
-					content in <code>src/lib/content.ts</code> or POST your own pages to{" "}
-					<code>/api/resources</code>.
+					© 2026 Asbury AI Solutions LLC. All rights reserved. Proprietary and
+					confidential.
 				</p>
 			</footer>
 		</main>

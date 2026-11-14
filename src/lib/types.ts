@@ -1,5 +1,5 @@
 /**
- * Shared types for the Agent Visibility template.
+ * Shared types for the Asbury AI Solutions agent-visibility platform.
  *
  * The whole template is built around one idea: a single store of enriched
  * "resources" (pages, articles, docs — anything an AI agent might want to
