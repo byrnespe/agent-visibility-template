@@ -1,5 +1,5 @@
 /**
- * Agent Visibility Worker
+ * Asbury AI Solutions — Agent Visibility Worker
  *
  * Serves one enriched content store through every agent-discovery surface:
  *

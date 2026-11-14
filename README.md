@@ -1,10 +1,8 @@
-# AI Agent Visibility
+# Asbury AI Solutions — Agent Visibility
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/agent-visibility-template)
+> Proprietary and confidential. Copyright (c) 2026 Asbury AI Solutions LLC. All rights reserved. See [LICENSE](./LICENSE).
 
-<!-- dash-content-start -->
-
-Search is shifting from links to answers. To show up in those answers, your content has to be readable by AI agents and crawlers — in whatever convention each one looks for. This template makes your site visible across **every** agent-discovery surface from a single content store, powered by [Workers AI](https://developers.cloudflare.com/workers-ai/).
+Search is shifting from links to answers. To show up in those answers, your content has to be readable by AI agents and crawlers — in whatever convention each one looks for. This platform makes a site visible across **every** agent-discovery surface from a single content store, powered by [Workers AI](https://developers.cloudflare.com/workers-ai/).
 
 **How it works:** the Worker enriches your content once with Workers AI — deriving a clean title, an agent-friendly summary, key points, and topic tags — caches it in [KV](https://developers.cloudflare.com/kv/), then projects that one store onto every surface an agent might request:
 
@@ -18,27 +16,13 @@ Search is shifting from links to answers. To show up in those answers, your cont
 
 The same data, in whichever shape an agent prefers. A bundled UI lets you preview and copy each surface live.
 
-This template ships with sample content so it works the moment you deploy it. Point it at your own pages by editing `src/lib/content.ts`, or POST content to `/api/resources` to enrich it on the fly.
-
-<!-- dash-content-end -->
+It currently ships with placeholder sample content. Point it at real pages by editing `src/lib/content.ts`, or POST content to `/api/resources` to enrich it on the fly.
 
 ## Who is this for
 
 - **Anyone who wants to show up in AI answers.** If readers increasingly ask ChatGPT, Claude, or Perplexity instead of clicking a search result, this gives those agents a clean, structured copy of your content to cite.
 - **Developers exploring AEO (Answer Engine Optimization).** A working reference for the emerging set of agent-discovery conventions, all in one Worker.
 - **Teams who keep getting agent 4xxs.** If bot analytics show AI agents hitting paths they can't read, this is the fix: serve them content they can.
-
-> Looking for a commerce-specific version? See the [`commerce-llms-txt-template`](../commerce-llms-txt-template) for a product-catalog–focused `/llms.txt`. This template is the general, multi-surface counterpart.
-
-## Getting Started
-
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/learning-paths/workers/get-started/first-worker/) (the `create-cloudflare` CLI):
-
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/agent-visibility-template
-```
-
-A live preview is generated for every pull request via the Deploy to Cloudflare button above.
 
 ## Setup
 
@@ -96,8 +80,8 @@ All configuration lives in `wrangler.jsonc` under `vars`:
 
 | Variable               | Description                                                   | Default                                    |
 | ---------------------- | ------------------------------------------------------------- | ------------------------------------------ |
-| `SITE_NAME`            | Your site's name, shown across every surface                  | `Acme Docs`                                |
-| `SITE_DESCRIPTION`     | One-line description for agents                               | _(sample)_                                 |
+| `SITE_NAME`            | Your site's name, shown across every surface                  | `Asbury AI Solutions`                      |
+| `SITE_DESCRIPTION`     | One-line description for agents                               | _(see `wrangler.jsonc`)_                   |
 | `AI_MODEL`             | Workers AI model used for enrichment                          | `@cf/meta/llama-3.3-70b-instruct-fp8-fast` |
 | `ENRICHMENT_CACHE_TTL` | Seconds to cache enriched records in KV                       | `3600`                                     |
 | `CONTENT_SIGNAL`       | Content-Signal policy (emitted in robots.txt and as a header) | `ai-input=yes, search=yes, ai-train=no`    |
@@ -195,4 +179,9 @@ run locally without making Workers AI requests.
 
 ## License
 
-See the repository [LICENSE](../LICENSE).
+Proprietary. Copyright (c) 2026 Asbury AI Solutions LLC. All rights reserved.
+No use, copying or distribution is permitted without a written agreement — see
+[LICENSE](./LICENSE).
+
+This codebase derives from Cloudflare's MIT-licensed `agent-visibility-template`;
+the required upstream notice is in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).

@@ -1,8 +1,10 @@
-# AGENTS.md — Agent Visibility Template
+# AGENTS.md — Asbury AI Solutions Agent Visibility
 
-Notes for AI agents working on this template.
+Notes for AI agents working on this codebase. Proprietary to Asbury AI
+Solutions LLC (see `LICENSE`); derived from Cloudflare's MIT-licensed template
+(see `THIRD_PARTY_NOTICES.md`).
 
-## What this template is
+## What this is
 
 One enriched content store (`Resource[]`) projected onto many agent-discovery
 surfaces. The data is enriched once by Workers AI and cached in KV; every

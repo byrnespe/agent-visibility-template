@@ -16,7 +16,7 @@ export const RAW_KEY = "resources:raw";
 
 export function siteConfig(env: Env, origin: string): SiteConfig {
 	return {
-		name: env.SITE_NAME || "My Site",
+		name: env.SITE_NAME || "Asbury AI Solutions",
 		description: env.SITE_DESCRIPTION || "Content made visible to AI agents.",
 		origin,
 	};
